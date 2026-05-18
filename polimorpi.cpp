@@ -12,5 +12,5 @@ class seseorang
 };
 class joko : public seseorang
 {
-    
+    public:
 };
