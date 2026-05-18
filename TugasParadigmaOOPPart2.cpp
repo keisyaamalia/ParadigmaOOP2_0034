@@ -55,3 +55,38 @@ public:
         }
     }
 };
+
+int main() {
+
+    RekeningBank* rekening1 = new RekeningSyariah("SYR001", 5000000);
+    RekeningBank* rekening2 = new RekeningKonvensional("KON001", 3000000);
+    RekeningBank* rekening3 = new RekeningPremium("PRM001", 12000000);
+    RekeningBank* rekening4 = new RekeningPremium("PRM002", 7000000);
+
+    cout << "=== Proses Potongan Admin Akhir Bulan ===" << endl;
+
+    rekening1->potongAdmin();
+    rekening1->tampilkanInfo();
+
+    cout << endl;
+
+    rekening2->potongAdmin();
+    rekening2->tampilkanInfo();
+
+    cout << endl;
+
+    rekening3->potongAdmin();
+    rekening3->tampilkanInfo();
+
+    cout << endl;
+
+    rekening4->potongAdmin();
+    rekening4->tampilkanInfo();
+
+    delete rekening1;
+    delete rekening2;
+    delete rekening3;
+    delete rekening4;
+
+    return 0;
+}
