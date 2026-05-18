@@ -20,3 +20,13 @@ public:
 
     virtual ~RekeningBank() {}
 };
+
+class RekeningSyariah : public RekeningBank {
+public:
+    RekeningSyariah(string no, double saldoAwal)
+        : RekeningBank(no, saldoAwal) {}
+
+    void potongAdmin() override {
+        cout << "Rekening Syariah: Tidak ada potongan admin bulanan." << endl;
+    }
+};
